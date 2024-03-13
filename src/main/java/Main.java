@@ -1,8 +1,16 @@
+import java.util.Random;
+
 public class Main {
     public static void main(String[] args) {
-        for (int i = 0; i <= 100; i += 4) {
-            System.out.println(i);
-          //SDSDSDS
+        Random random = new Random();
+        int sum = 0;
+
+        for (int i = 0; i < 5; i++) {
+            int randomNumber = random.nextInt(101); 
+            sum += randomNumber * randomNumber; 
+            System.out.println("Liczba " + (i+1) + ": " + randomNumber);
         }
+
+        System.out.println("Suma kwadratów: " + sum);
     }
 }
